@@ -1,5 +1,7 @@
 class FullInvoice
-  attr_accessor :employee_info, :employee_email, :customer_info, :customer_name, :customer_account_no, :product_name, :sale_date, :sale_amount, :units_sold, :invoice_no, :invoice_frequency
+  attr_accessor :employee_info, :customer_info, :product_name,
+  :sale_date, :sale_amount, :units_sold, :invoice_no,
+  :invoice_frequency
 
   def initialize(full_invoice)
     @employee_info = full_invoice[0]
