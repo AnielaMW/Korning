@@ -6,6 +6,7 @@
 require "pg"
 require "csv"
 require "pry"
+require_relative "models/invoice"
 
 system "psql korning < schema.sql"
 
@@ -21,5 +22,5 @@ end
 @full_invoices = CSV.foreach('sales.csv', headers: true)
 
 @full_invoices.each do |full_invoice|
-  new_invoice = Full_invoice.new(full_invoice)
+  new_invoice = FullInvoice.new(full_invoice)
 end
